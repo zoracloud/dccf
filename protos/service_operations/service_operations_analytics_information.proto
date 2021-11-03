@@ -1,0 +1,136 @@
+syntax = "proto3";
+package service_operations;
+
+message AnalyticsInformation {
+
+    /*
+    * Slice Load level information:
+    * Load level provided as number of UE 
+    * registrations and number of PDU sessions for a Network Slice and Network 
+    * Slice instances as well as resource utilization for Network Slice 
+    * instances.
+    */
+
+    int32 load_level_information = 1;
+
+    /*
+    * Observed Service experience information:
+    * Observed Service experience statistics or predictions may be provided for
+    * a Network Slice or an Application. 
+    * They may be derived from an individual UE, a group of UEs or any UE. 
+    * For slice service experience
+    * they may be derived from an Application, a set of Applications or all 
+    * Applications on the Network Slice.
+    */
+
+    int32 service_experience = 2;
+
+    /*
+    * NF Load information
+    * Load statistics or predictions information for specific NF(s).
+    */
+
+    int32 nf_load_information = 3;
+
+    /*
+    * Network Performance information:
+    * Statistics or predictions on the load in an Area of Interest; in 
+    * addition, statistics or predictions on the number of UEs that are 
+    * located in that Area of Interest.
+    *
+    */
+
+    int32 network_performance = 4;
+
+    /*
+    * UE mobility information:
+    * Statistics or predictions on UE mobility.
+    */
+
+    int32 ue_mobility = 5;
+
+    /*
+    * UE Communication information:
+    * Statistics or predictions on UE communication.
+    */
+
+    int32 ue_communication = 6;
+
+    /*
+    * Expected UE behavioural parameters:
+    * Analytics on UE Mobility and/or UE Communication.
+    */
+
+    int32 ue_mobility_and_or_ue_communication = 7;
+
+    /*
+    * UE Abnormal behaviour information:
+    * List of observed or expected exceptions, with Exception ID, Exception 
+    * Level and other information, depending on the observed or expected exceptions.
+    *
+    */
+
+    int32 abnormal_behaviour = 8;
+
+    /*
+    * User Data Congestion information:
+    * Statistics or predictions on the user data congestion for transfer over 
+    * the user plane, for transfer over the control plane, or for both.
+    */
+
+    int32 user_data_congestion = 9;
+
+    /*
+    * QoS Sustainability:
+    * For statistics, the information on the location and the time for the QoS 
+    * change and the threshold(s) that were crossed; or, for predictions, 
+    * the information on the location and the time when a potential QoS change
+    *  may occur and what threshold(s) may be crossed.
+    */
+
+    int32 qos = 10;
+
+    /*
+    * Session Management Congestion Control Experience:
+    * Statistics on session management congestion control experience for 
+    * specific DNN and/or S-NSSAI.
+    */
+
+    int32 session_management_congestion_control_experience = 11;
+
+
+    /*
+    * Redundant Transmission Experience
+    * Statistics or predictions aimed at supporting redundant transmission 
+    * decisions for URLLC services.
+    */
+
+    int32 redundant_transmission_experience = 12;
+
+    /*
+    * WLAN performance:
+    * Statistics or predictions on WLAN performance of UE.
+    */
+
+    int32 wlan_performance = 13;
+
+
+    /*
+    * Dispersion:
+    * Statistics or predictions that identify the location 
+    * (i.e. areas of interest) or network slice(s) where a UE, or a group of 
+    * UEs disperse their data volume, or disperse mobility or session 
+    * management transactions or both.
+    */
+
+    int32 ue_dispersion = 14;
+
+    /*
+    * DN Performance
+    * Statistics or predictions on user plane performance for a specific Edge 
+    * Computing application.
+    *
+    */
+
+    int32 dn_performance = 15;
+}

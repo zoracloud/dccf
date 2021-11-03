@@ -1,0 +1,51 @@
+syntax = "proto3";
+package service_operations;
+
+message AnalyticsInformation {
+
+    /*
+    * Slice Load level information:
+    * Load level provided as number of UE 
+    * registrations and number of PDU sessions for a Network Slice and Network 
+    * Slice instances as well as resource utilization for Network Slice 
+    * instances.
+    */
+
+    int32 load_level_information = 1;
+
+    /*
+    * Observed Service experience information:
+    * Observed Service experience statistics or predictions may be provided for
+    * a Network Slice or an Application. 
+    * They may be derived from an individual UE, a group of UEs or any UE. 
+    * For slice service experience
+    * they may be derived from an Application, a set of Applications or all 
+    * Applications on the Network Slice.
+    */
+
+    int32 service_experience = 2;
+
+    /*
+    * NF Load information
+    * Load statistics or predictions information for specific NF(s).
+    */
+
+    int32 nf_load_information = 3;
+
+    /*
+    * Network Performance information:
+    * Statistics or predictions on the load in an Area of Interest; in 
+    * addition, statistics or predictions on the number of UEs that are 
+    * located in that Area of Interest.
+    *
+    */
+
+    int32 network_performance = 4;
+
+    /*
+    *
+    *
+    *
+    */
+
+}
